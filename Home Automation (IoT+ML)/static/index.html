@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+	<head>
+		<title>Device Control</title>
+		<link rel='stylesheet' href='../static/style.css'/>
+		<meta http-equiv="refresh" content="3"/>
+	</head>
+	<body>
+		<h1>{{ title }}</h1>
+		<h3>Temperature ==> {{ temp }}<br>Humidity ==> {{ hum }}<br>
+			Weather ==> {{ weather }}<br><br></h3>
+		<h3>Light ==> {{ relay }}<br>
+			LIGHT control ==> 
+			{% if relay=='OFF' %}
+				<a href='/relay/on' class='button'>TURN ON</a>
+			{% else %}
+				<a href='/relay/off' class='button'>TURN OFF</a>
+			{% endif %}
+		</h3>
+	</body>
